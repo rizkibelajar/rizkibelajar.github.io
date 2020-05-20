@@ -14,12 +14,12 @@
 <body>
 
 <div class="w3-container"><strong>
-    <div class="w3-row">
+    <div class="w3-row w3-small">
     <a href="javascript:void(0)" onclick="openTab(event, 'Login');">
       <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-blue">Login</div>
     </a>
     <a href="javascript:void(0)" onclick="openTab(event, 'Dosen');">
-      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey Dosen (KBM)</div>
+      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey Dosen</div>
     </a>
     <a href="javascript:void(0)" onclick="openTab(event, 'Vmts');">
       <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey VMTS</div>
