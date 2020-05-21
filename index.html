@@ -45,7 +45,6 @@
 <!-- navbar-expand-md referencing md (768px) for changing from the mobile navigation to the expanded full width navigation. navbar light bg-light ref to the bckground of nav, white with dark text item. sticky top set fixed but when entering new section will be hidden. container fluid takes up 100% of the screen. navbar-brand for adding logo. toggler for toggle switch navigation. our nav will be csollapsing opening. ml-auto forces the vertical nav item to horizontal into the miidle to the right when it set to full width screen   -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 	<div class="container-fluid">
-		<a class="navbar-brand w3-hide-small w3-hide-medium" href="#"><img src="http://spmb.stikes-baktara.ac.id/img/logo.png" width="400px" height="50px"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
