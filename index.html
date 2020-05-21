@@ -105,14 +105,14 @@
 
 <!-- Footer -->
 <footer style="margin-top: 5em">
-	<div class="container-fluid w3-padding w3-dark-grey">
+	<div class="container-fluid w3-padding w3-dark-grey w3-small">
 		<div class="row">
 			<div class="col-md-4">
 				<h5 class="w3-text-yellow">Contact Us</h5>
 				<p><span><i class="fa fa-university"></i></span> STIKES Bakti Nusantara Gorontalo</p>
 				<p><span><i class="fa fa-map-marker"></i></span> Jl. Bali III, kel. Pulubala, kec. Kota Tengah, kota Gorontalo</p>
 				<p><i class="fa fa-envelope"></i> contact@stikes-baktara.ac.id</p>
-				<p class="w3-text-green"><i class="fab fa-whatsapp" aria-hidden="true"></i>  Riska 0822-926-57-338 || Nissa 0853-9610-5246</p>
+				<p class="w3-text-green"><i class="fa fa-whatsapp" aria-hidden="true"></i>  Riska 0822-926-57-338 || Nissa 0853-9610-5246</p>
 			</div>
 			<div class="col-md-4">
 				<h5 class="w3-text-yellow">Our Hours</h5>
