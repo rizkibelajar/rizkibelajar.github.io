@@ -15,9 +15,15 @@
     	color: pink;
         font-weight: bold;
     }
+    .body {
+			position: relative;
+		}
+	.tabItem {
+    		display:none
+        }
   </style>
 </head>
-<body class="w3-serif">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" class="w3-serif">
 
 <!-- Image Slider -->
 <div id="slides" class="carousel slide" data-ride="carousel">
@@ -35,28 +41,28 @@
 	</div>
 </div>
 
-<nav class="navbar navbar-expand-sm w3-teal">
-  <a class="navbar-brand w3-text-white
-" href="#"><i style="font-size:24px" class="fa">&#xf0c9;</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link w3-text-white
-" href="#dosen">Suvery Penilaian Dosen (KBM)</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link w3-text-white
-" href="#vmts">Suvery Penilaian Visi Misi dan Strategi</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link w3-text-white
-" href="#tendik">Suvery Penilaian Tenaga Kependidikan</a>
-      </li>    
-    </ul>
-  </div>  
+<!-- Navigation -->
+<!-- navbar-expand-md referencing md (768px) for changing from the mobile navigation to the expanded full width navigation. navbar light bg-light ref to the bckground of nav, white with dark text item. sticky top set fixed but when entering new section will be hidden. container fluid takes up 100% of the screen. navbar-brand for adding logo. toggler for toggle switch navigation. our nav will be csollapsing opening. ml-auto forces the vertical nav item to horizontal into the miidle to the right when it set to full width screen   -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand w3-hide-small w3-hide-medium" href="#"><img src="img/logo.png" width="400px" height="50px"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#slides">Suvery Penilaian Dosen (KBM)</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#panduan">Suvery Penilaian Visi Misi dan Strategi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#prodi">Suvery Penilaian Tenaga Kependidikan</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
 <div class="container" style="margin-top:5em">
@@ -104,7 +110,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<h5 class="w3-text-yellow">Contact Us</h5>
-				<p><span><i class="fas fa-university"></i></span> STIKES Bakti Nusantara Gorontalo</p>
+				<p><span><i class="fa fa-university"></i></span> STIKES Bakti Nusantara Gorontalo</p>
 				<p><span><i class="fa fa-map-marker"></i></span> Jl. Bali III, kel. Pulubala, kec. Kota Tengah, kota Gorontalo</p>
 				<p><i class="fa fa-envelope"></i> contact@stikes-baktara.ac.id</p>
 				<p class="w3-text-green"><i class="fab fa-whatsapp" aria-hidden="true"></i>  Riska 0822-926-57-338 || Nissa 0853-9610-5246</p>
