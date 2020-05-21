@@ -1,41 +1,75 @@
 <!DOCTYPE html>
-<html>
-<title>Layanan Kemahasiswaan</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.login {
-        margin: 125px auto;
-        width: 720px;
-        padding: 16px;
-
+<html lang="en">
+<head>
+  <title>Layanan Kemahasiswaan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  	.link a {
+    	color: pink;
+        font-weight: bold;
     }
-</style>
-<body>
+  </style>
+</head>
+<body class="w3-serif">
 
-<div class="w3-container"><strong>
-    <div class="w3-row w3-small">
-    <a href="javascript:void(0)" onclick="openTab(event, 'Login');">
-      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-blue">Login</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openTab(event, 'Dosen');">
-      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey Dosen</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openTab(event, 'Vmts');">
-      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey VMTS</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openTab(event, 'Tendik');">
-      <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-teal">Survey Tendik</div>
-    </a></strong>
-  </div>
+<!-- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="w3-image" width="100%" src="http://spmb.stikes-baktara.ac.id/img/RMIK.jpg">
+		</div>
+		<div class="carousel-item">
+			<img class="w3-image" width="100%" src="http://spmb.stikes-baktara.ac.id/img/BG2.jpg">
+		</div>
+	</div>
+</div>
 
-  <div id="Login" class="item w3-container login" style="display:none"> 
-  <h5 class="w3-center"><b>LOGIN TERLEBIH DAHULU!</b></h5><br>
-      <form class="w3-card-4 w3-padding" action="/action_page.php">
+<nav class="navbar navbar-expand-sm w3-teal">
+  <a class="navbar-brand w3-text-white
+" href="#"><i style="font-size:24px" class="fa">&#xf0c9;</i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link w3-text-white
+" href="#dosen">Suvery Penilaian Dosen (KBM)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link w3-text-white
+" href="#vmts">Suvery Penilaian Visi Misi dan Strategi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link w3-text-white
+" href="#tendik">Suvery Penilaian Tenaga Kependidikan</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container" style="margin-top:5em">
+  <div class="row">
+    <div class="col-sm-12">
+    <h2 class="w3-center"><b>Suvery Penilaian Dosen (KBM)</b></h2><br>
+      <form class="w3-container w3-padding w3-border w3-border-teal" method="POST" action="/action_page.php">
+        <p>
         <label><b>NIM</b></label>
         <input class="w3-input" type="number" name="nim" placeholder="Masukkan NIM yang benar">
-
-          <h5><b>Semester:</b></h5>
+		</p>
+        <p>
+          <b>Semester:</b><br>
           <select class="w3-select" name="semester">
             <option value="" disabled selected>Pilih Semester</option>
             <option value="1">Semester 1</option>
@@ -47,58 +81,57 @@
             <option value="7">Semester 7</option>
             <option value="8">Semester 8</option>
           </select>
+		</p>
 
-
-          <h5><b>Program Studi:</b></h5>
+          <p>
+          <b>Program Studi:</b><br>
           <select class="w3-select" name="prodi">
             <option value="" disabled selected>Pilih Program Studi</option>
             <option value="1">RMIK</option>
             <option value="2">Ilmu Gizi</option>
           </select>
-          
-          <h5><b>Jenis Survey:</b></h5>
-          <select class="w3-select" name="survey">
-            <option value="" disabled selected>Pilih Jenis Survey</option>
-            <option value="1">Survey Penilaian Dosen</option>
-            <option value="2">Survey Penilaian Visi Misi Tujuan Strategi</option>
-            <option value="3">Survey Penilaian Tenaga Kependidikan</option>
-          </select>
+          </p>
 		
-          <p><button class="w3-btn w3-teal w3-right w3-margin-top w3-card-4">Mulai Survey</button></p>
+          <p><button class="w3-right w3-teal w3-padding" style="margin: 5%">Mulai Survey</button></p>
        </form>
-  </div>
-
-  <div id="Dosen" class="w3-container item" style="display:none">
-    <h2 class="w3-center"><b>SURVEY PENILAIAN DOSEN (KBM)</b></h2>
-    <p>Survey otw...</p> 
-  </div>
-  
-   <div id="Vmts" class="w3-container item" style="display:none">
-    <h2 class="w3-center"><b>SURVEY VISI, MISI, TUJUAN DAN STRATEGI</b></h2>
-    <p>Survey otw...</p> 
-  </div>
-
-  <div id="Tendik" class="w3-container item" style="display:none">
-    <h2 class="w3-center"><b>SURVEY PENILAIAN TENAGA KEPENDIDIKAN</b></h2>
-    <p>Survey otw...</p>
+    </div>
   </div>
 </div>
 
-<script>
-function openTab(evt, tabName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-border-blue", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-border-blue";
-}
-</script>
+<!-- Footer -->
+<footer style="margin-top: 5em">
+	<div class="container-fluid w3-padding w3-dark-grey">
+		<div class="row">
+			<div class="col-md-4">
+				<h5 class="w3-text-yellow">Contact Us</h5>
+				<p><span><i class="fas fa-university"></i></span> STIKES Bakti Nusantara Gorontalo</p>
+				<p><span><i class="fa fa-map-marker"></i></span> Jl. Bali III, kel. Pulubala, kec. Kota Tengah, kota Gorontalo</p>
+				<p><i class="fa fa-envelope"></i> contact@stikes-baktara.ac.id</p>
+				<p class="w3-text-green"><i class="fab fa-whatsapp" aria-hidden="true"></i>  Riska 0822-926-57-338 || Nissa 0853-9610-5246</p>
+			</div>
+			<div class="col-md-4">
+				<h5 class="w3-text-yellow">Our Hours</h5>
+				<p>Monday: 9am - 5pm</p>
+				<p>Saturday-Sunday: closed</p>
+				<p>National Public Holidays: closed</p>
+				<p>Global Pandemic of Covid-19: closed</p>
+			</div>
+			<div class="col-md-4">
+				<h5 class="w3-text-yellow">Important Links</h5>
+                <div class="link">
+				<a href="http://www.stikes-baktara.ac.id"><p>stikes-baktara.ac.id</p></a>
+				<a href="https://kip-kuliah.kemdikbud.go.id/"><p>kip-kuliah.kemdikbud.go.id</p></a>
+				<a href="http://sinta2.ristekdikti.go.id/"><p>sinta.ristekbrin.go.id</p></a>
+				<a href="http://perpusnas.go.id"><p>perpusnas.go.id</p></a>
+                </div>
+			</div>
+			<div class="col-12 text-center">
+				<hr class="light-100">
+				<h5>&copy;layanan.stikes-baktara.ac.id</h5>
+			</div>
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>
